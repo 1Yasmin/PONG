@@ -109,24 +109,31 @@ public class Ball : MonoBehaviour
         //Direccion de la bola al colisionar con la barra del player 1
         if (col.gameObject.name == "Player1")
         {
-
+			//Colisio en el area central
             rb.velocity = new Vector3(8.0f, 0.0f, 0.0f);
 
+			//Colisión en la parte inferior
             if (transform.position.y - col.gameObject.transform.position.y < -0.15f)
                 rb.velocity = new Vector3(8.0f, 8.0f, 0.0f);
 
+			//Colisión en la parte superior
             if (transform.position.y - col.gameObject.transform.position.y > 0.15f)
                 rb.velocity = new Vector3(8.0f, -8.0f, 0.0f);
         }
 
+		
+        //Direccion de la bola al colisionar con la barra del player 2
         if (col.gameObject.name == "Player2")
         {
-
+			//Colisio en el area central
             rb.velocity = new Vector3(-8.0f, 0.0f, 0.0f);
-
+			
+			
+			//Colisión en la parte inferior
             if (transform.position.y - col.gameObject.transform.position.y < -0.15f)
                 rb.velocity = new Vector3(8.0f, 8.0f, 0.0f);
 
+			//Colisión en la parte superior
             if (transform.position.y - col.gameObject.transform.position.y > 0.15f)
                 rb.velocity = new Vector3(8.0f, -8.0f, 0.0f);
 

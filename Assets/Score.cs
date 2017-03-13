@@ -25,20 +25,24 @@ public class Score : MonoBehaviour {
 		
 	}
 
+	// contador de los puntos del player 1
     public void PuntoPlayer1()
     {
         player1 += 1;
-        txtScore1.text = player1.ToString(); 
+        txtScore1.text = player1.ToString(); // cambia el texto del score del player 1
+	//Carga la escena de "PLAYER 1 WINS" Si este alcanza 5 puntos
         if(player1 > 4)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(1); 
         }
     }
 
+	// contador de los puntos del player 2
     public void PuntoPlayer2()
     {
         player2 += 1;
-        txtScore2.text = player2.ToString();
+        txtScore2.text = player2.ToString(); //cambia el texto del player 2
+		//Carga la escena de "PLAYER 2 WINS" Si este alcanza 5 puntos
         if (player2 > 4)
         {
             SceneManager.LoadScene(2);

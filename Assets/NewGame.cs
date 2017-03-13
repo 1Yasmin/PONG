@@ -14,7 +14,7 @@ public class NewGame : MonoBehaviour {
 	void Update () {
 		
 	}
-
+	//regresa a la escena del juego
     public void IniciarPartida() {
         SceneManager.LoadScene(0);
     }
